@@ -2,6 +2,7 @@
     /**
     * Search Form 
     * creates and append the form into the search div
+    * @param parent where to append the search input
     * Just type anything to start using
     */
 function Search_Form(parent) {
@@ -60,7 +61,7 @@ async function getJSON(url) {
 
     /**
     * Highlight a detail from an user
-    * 
+    * @param id pass the id to show detail
     */
   function showDetail(id) {
         let tar = document.getElementById(id);
@@ -161,6 +162,8 @@ async function getJSON(url) {
 /**
 * Inicialize the functions
 * @param UsersURL an url from a random users API
+* @param generateHTML function to generate html from API returned
+* @param err error that will be displayed in console
 * Get data from an API, Generates HTML and catch errors
 */  
 getPeople(usersURL)
